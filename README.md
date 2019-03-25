@@ -3,6 +3,8 @@
 Sandbox for testing BML Maldives Payment Gateway.
 The password is `123456`.
 
+Check the demo [here](https://mpg.javaabu.net).
+
 ## Credits
 
 - [Arushad Ahmed (@dash8x)](http://arushad.org)
