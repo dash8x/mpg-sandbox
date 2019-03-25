@@ -89,7 +89,7 @@ $ref_num = rand_num(8) . rand_string(4);
             <div class="py-5 text-center">
                 <h2>MPG Sandbox</h2>
                 <p class="lead">
-                    This is a demo sandbox for Maldives Payment Gateway (MPG).<br>Click on proceed after entering your desired parameters.
+                    This is a demo sandbox for Maldives Payment Gateway (MPG).
                     <br>Get the code from <a href="https://github.com/dash8x/mpg-sandbox">dash8x/mpg-sandbox</a>.
                 </p>
             </div>
