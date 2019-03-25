@@ -86,7 +86,7 @@ $ref_num = rand_num(8) . rand_string(4);
 
     <body class="bg-light">
         <div class="container">
-            <div class="py-5 text-center">
+            <div class="pt-5 pb-3 text-center">
                 <h2>MPG Sandbox</h2>
                 <p class="lead">
                     This is a demo sandbox for Maldives Payment Gateway (MPG).
@@ -94,7 +94,7 @@ $ref_num = rand_num(8) . rand_string(4);
                 </p>
             </div>
 
-            <form method="POST" action="<?php echo $merch_resp_url; ?>">
+            <form class="pb-2" method="POST" action="<?php echo $merch_resp_url; ?>">
                 <div class="alert alert-<?php echo $verified ? 'success' : 'danger'; ?>">
                     <h4 class="alert-heading"><?php echo $verified ? 'Verified' : 'Failed Sig'; ?></h4>
                     <p class="mb-0">
