@@ -53,6 +53,28 @@ $responses = array(
 );
 $response = $responses[array_rand($responses)];
 
+$card_types = array(
+    '407387' => ['name' => 'VISA Credit Classic', 'fee' => 3.5],
+    '407388' => ['name' => 'VISA Credit Gold', 'fee' => 3.5],
+    '443089' => ['name' => 'VISA Credit Corporate', 'fee' => 3.5],
+    '421363' => ['name' => 'VISA Debit', 'fee' => 3.5],
+    '401618' => ['name' => 'VISA Credit Platinum', 'fee' => 3.5],
+    '489512' => ['name' => 'VISA Debit BML Islamic', 'fee' => 2.5],
+    '438694' => ['name' => 'VISA Credit Signature', 'fee' => 3.5],
+    '377668' => ['name' => 'Amex Credit Green', 'fee' => 4.0],
+    '379224' => ['name' => 'Amex  Credit Green', 'fee' => 4.0],
+    '533294' => ['name' => 'MasterCard Pre-paid (RELOADABLE)', 'fee' => 2.5],
+    '533297' => ['name' => 'MasterCard Prepaid Reloadable USD', 'fee' => 2.5],
+    '518815' => ['name' => 'MasterCard Credit Standard', 'fee' => 2.5],
+    '518837' => ['name' => 'MasterCard Credit Gold', 'fee' => 2.5],
+    '552223' => ['name' => 'MasterCard Credit Platinum', 'fee' => 2.5],
+    '536304' => ['name' => 'MasterCard World', 'fee' => 2.5],
+    '603438' => ['name' => 'Vaaru Card MVR', 'fee' => 2.5],
+);
+
+$card_nos = array_keys($card_types);
+$card_no = $card_nos[array_rand($card_nos)];
+
 
 $password = '123456';
 $merch_resp_url = isset($_POST['MerRespURL']) ? $_POST['MerRespURL'] : '';
@@ -67,7 +89,7 @@ $signature = isset($_POST['Signature']) ? $_POST['Signature'] : '';
 $generated_sig = base64_encode(sha1($password . $merchant_id . $acq_id . $order_id . $purchase_amount . $purchase_curr, true));
 $verified = $signature == $generated_sig;
 $response_signature = base64_encode(sha1($password . $merchant_id . $acq_id . $order_id . $response['resp_code'] . $response['reason_code'], true));
-$card_number = 'xxxxxxxxxxxx' . rand_num(4);
+$card_number = $card_no.'xxxxxx' . rand_num(4);
 $auth_code = rand_string(6);
 $ref_num = rand_num(8) . rand_string(4);
 ?>
